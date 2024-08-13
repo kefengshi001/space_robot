@@ -24,6 +24,7 @@
 #include "space_interfaces/srv/multi_axis.hpp"
 #include "space_interfaces/srv/joint_jogging.hpp"
 #include "space_interfaces/msg/joint_jogging_msg.hpp"
+#include "space_interfaces/srv/multi_axis_offset.hpp"
 
 
 
@@ -49,8 +50,10 @@ class space_driver:public rclcpp::Node
         rclcpp::Service<space_interfaces::srv::SpeedSet>::SharedPtr set_speed_service;          // 设置速度服务端
         rclcpp::Publisher<space_interfaces::msg::RobotState>::SharedPtr robot_state_publisher;        // 机器人状态发布
         rclcpp::Service<space_interfaces::srv::MultiAxis>::SharedPtr rocos_movej_service;        // 启动rocos_movej服务端
+        rclcpp::Service<space_interfaces::srv::MultiAxisOffset>::SharedPtr rocos_movej_offset_service;  // 启动rocos_movej_offset服务端
         rclcpp::Service<space_interfaces::srv::JointJogging>::SharedPtr joint_jogging_service;  // 启动关节 jog服务端
-        rclcpp::Subscription<space_interfaces::msg::JointJoggingMsg>::SharedPtr joint_jogging_sub;
+        rclcpp::Subscription<space_interfaces::msg::JointJoggingMsg>::SharedPtr joint_jogging_sub;  // 关节 jog订阅
+   
 
         void start_connect_callback(const std::shared_ptr<space_interfaces::srv::Connection::Request> request, std::shared_ptr<space_interfaces::srv::Connection::Response> response);
         void timer_callback();     // 定时器回调函数，判断连接状态，启动其余服务端等
@@ -58,6 +61,7 @@ class space_driver:public rclcpp::Node
         void set_speed_callback(const std::shared_ptr<space_interfaces::srv::SpeedSet::Request> request, std::shared_ptr<space_interfaces::srv::SpeedSet::Response> response);
         void robot_state_timer_callback();
         void rocos_movej_callback(const std::shared_ptr<space_interfaces::srv::MultiAxis::Request> request,std::shared_ptr<space_interfaces::srv::MultiAxis::Response> response);
+        void rocos_movej_offset_callback(const std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Request> request,std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Response> response);
         void joint_jogging_ser_callback(const std::shared_ptr<space_interfaces::srv::JointJogging::Request> request,std::shared_ptr<space_interfaces::srv::JointJogging::Response> response);
         void joint_jogging_sub_callback(const space_interfaces::msg::JointJoggingMsg::SharedPtr msg);
 
@@ -71,8 +75,10 @@ class space_driver:public rclcpp::Node
         void Set_speed();       // 设置速度
         void Pub_robot_state(); // 发布机器人状态
         void RocosMoveJ();      // 关节空间移动
+        void RocosMoveJOffset();// 关节空间移动偏移
         void JointJoggingSer();    // 关节 jogging
         void JointJoggingSub();    // 关节 jogging
+        
 
 
 };

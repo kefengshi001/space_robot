@@ -65,6 +65,7 @@ void space_driver::timer_callback()
         RocosMoveJ();
         JointJoggingSer();
         JointJoggingSub();
+        RocosMoveJOffset();
 
         // 取消定时器
         this->timer_->cancel();
@@ -187,12 +188,12 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     // }
 
 
-    if (!(this->check_isEnable_before_move()))
-    {
-        response->success = false;
-        response->message = "机器人未正确使能";
-        return;
-    }
+    // if (!(this->check_isEnable_before_move()))
+    // {
+    //     response->success = false;
+    //     response->message = "机器人未正确使能";
+    //     return;
+    // }
     
 
     if (this->_speed > 0.1)
@@ -216,7 +217,8 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     // std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     KDL::JntArray q(7);
     // 当前机械臂的3和6关节没法运动
-    q(0) = request->goalangle[0] * pi / 180.0;
+    // q(0) = request->goalangle[0] * pi / 180.0;
+    q(0) = robot_ptr->getJointPosition(0);
     q(1) = request->goalangle[1] * pi / 180.0;
     // q(1) = robot_ptr->getJointPosition(1);
     // q(2) = request->goalangle[2] * pi / 180.0;
@@ -232,6 +234,53 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     response->success = true;
     response->message = "MoveJ执行结束";
     // RCLCPP_INFO()
+}
+
+void space_driver::RocosMoveJOffset()
+{
+    this->rocos_movej_offset_service = this->create_service<space_interfaces::srv::MultiAxisOffset>("multi_axis_offset",
+                                                                                            std::bind(&space_driver::rocos_movej_offset_callback, this, std::placeholders::_1, std::placeholders::_2));
+    RCLCPP_INFO(this->get_logger(), "RocosMoveJOffset服务端启动...");
+
+}
+
+void space_driver::rocos_movej_offset_callback(const std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Request> request,
+                                              std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Response> response)
+{
+    RCLCPP_INFO(this->get_logger(), "收到RocosMoveJOffset服务请求");
+
+    if (this->_speed > 0.1)
+    {
+        response->success = false;
+        response->message = "关节角速度过大";
+        // RCLCPP_INFO(this->get_logger(), "关节角速度过大，请重新赋值");
+        return;
+    }
+
+    if (this->_speed == 0)
+    {
+        response->success = false;
+        response->message = "关节角速度为0,请设置速度";
+        // RCLCPP_INFO(this->get_logger(), "关节角速度为0，请设置速度");
+        return;
+    }
+
+    KDL::JntArray q(7);
+    q(0) = robot_ptr->getJointPosition(0);
+    q(2) = robot_ptr->getJointPosition(2);
+    q(5) = robot_ptr->getJointPosition(5);
+
+    q(1) = robot_ptr->getJointPosition(1) + request->offsetangle[1] * pi / 180.0;
+    q(3) = robot_ptr->getJointPosition(3) + request->offsetangle[3] * pi / 180.0;
+    q(4) = robot_ptr->getJointPosition(4) + request->offsetangle[4] * pi / 180.0;
+    q(6) = robot_ptr->getJointPosition(6) + request->offsetangle[6] * pi / 180.0;
+
+    RCLCPP_INFO(this->get_logger(), "MoveJOffset执行开始");
+    robot_ptr->MoveJ(q, this->_speed);
+    RCLCPP_INFO(this->get_logger(), "MoveJOffset执行结束");
+    response->success = true;
+    response->message = "MoveJOffset执行结束";
+
 }
 
 void space_driver::JointJoggingSer()
@@ -338,7 +387,7 @@ bool space_driver::check_isEnable_before_move()
 {
     for (int i = 0; i < 7; i++)
     {
-        if (i == 2 || i == 5)
+        if (i == 0 || i == 1 || i == 2 || i == 5)
         {
             if (robot_ptr->isJointEnabled(i) == true)
             {
