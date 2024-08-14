@@ -4,6 +4,6 @@
 测试发布机器人状态：      ros2 topic echo /robot_state
 测试movej:              ros2 service call /multi_axis space_interfaces/srv/MultiAxis "{goalangle: [21.402,-15,0,-110,40,0,10]}" 
 测试Jogging（service）:  ros2 service call /joint_jogging space_interfaces/srv/JointJogging "{joint: joint1, run: true, signal: true}" 
-测试Jogging（topic）:   ros2 topic pub --rate 1000 /joint_jogging space_interfaces/msg/JointJoggingMsg "{joint: joint1, run: true, signal: true}"
+测试Jogging（topic）:   ros2 topic pub --rate 1000 /joint_jogging space_interfaces/msg/JointJoggingMsg "{joint: joint5, run: true, signal: true}"
 测试movejoffset:        ros2 service call /multi_axis_offset space_interfaces/srv/MultiAxisOffset "{offsetangle: [30,30,30,30,30,30,30]}"
 

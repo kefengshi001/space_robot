@@ -9,7 +9,7 @@ using namespace KDL;
 DEFINE_string(urdf, "/home/landau/Documents/GitHub/space_robot/src/space_driver/config/urdf0/urdf0.urdf", "Urdf file path");
 DEFINE_string(base, "base_link", "Base link name");
 DEFINE_string(tip, "link_7", "Tip link name");
-DEFINE_bool(sim, true , "Sim or not");
+DEFINE_bool(sim, false , "Sim or not");
 DEFINE_int32(id, 0, "hardware id, only work for real hardware");
 bool isRuning = true;
 
