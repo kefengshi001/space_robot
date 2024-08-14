@@ -66,6 +66,7 @@ void space_driver::timer_callback()
         JointJoggingSer();
         JointJoggingSub();
         RocosMoveJOffset();
+        RocosMoveJIK();
 
         // 取消定时器
         this->timer_->cancel();
