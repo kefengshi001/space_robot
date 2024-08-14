@@ -1,3 +1,0 @@
-int32 speed #(输入整型，代表的是0-100的百分比)
----
-bool success

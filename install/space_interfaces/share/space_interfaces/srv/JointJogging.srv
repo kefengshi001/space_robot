@@ -1,7 +1,0 @@
-string joint        # joint id
-#float velocity
-bool run           # run signal
-bool signal        # 运动的正反方向，true:+， false:-
----
-bool success       # indicate successful run of triggered service
-string message     # informational, e.g. for error messages
