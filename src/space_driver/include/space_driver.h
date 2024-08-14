@@ -25,6 +25,7 @@
 #include "space_interfaces/srv/joint_jogging.hpp"
 #include "space_interfaces/msg/joint_jogging_msg.hpp"
 #include "space_interfaces/srv/multi_axis_offset.hpp"
+#include "space_interfaces/srv/move_jik.hpp"
 
 
 
@@ -37,6 +38,7 @@ class space_driver:public rclcpp::Node
         // static const int _joint_5 = 4;
         bool connection_status = false;
         double _speed = 0.0;
+        double _accel = 0.1;
         std::thread jogging_thread;
         std::mutex jogging_mtx;         // 互斥锁,是一个互斥量，用于保护对 stop_jogging 的访问。
         std::condition_variable jogging_cv;     // 条件变量,是一个条件变量，用于通知 jogging_thread 停止循环。jogging_cv 是一个条件变量，用于通知线程停止。
@@ -49,10 +51,12 @@ class space_driver:public rclcpp::Node
         rclcpp::Service<space_interfaces::srv::JointEnable>::SharedPtr set_enable_service;      // 设置使能服务端
         rclcpp::Service<space_interfaces::srv::SpeedSet>::SharedPtr set_speed_service;          // 设置速度服务端
         rclcpp::Publisher<space_interfaces::msg::RobotState>::SharedPtr robot_state_publisher;        // 机器人状态发布
-        rclcpp::Service<space_interfaces::srv::MultiAxis>::SharedPtr rocos_movej_service;        // 启动rocos_movej服务端
+        rclcpp::Service<space_interfaces::srv::MultiAxis>::SharedPtr rocos_movej_service;        // rocos_movej服务端
         rclcpp::Service<space_interfaces::srv::MultiAxisOffset>::SharedPtr rocos_movej_offset_service;  // 启动rocos_movej_offset服务端
-        rclcpp::Service<space_interfaces::srv::JointJogging>::SharedPtr joint_jogging_service;  // 启动关节 jog服务端
+        rclcpp::Service<space_interfaces::srv::JointJogging>::SharedPtr joint_jogging_service;  // 关节 jog服务端
         rclcpp::Subscription<space_interfaces::msg::JointJoggingMsg>::SharedPtr joint_jogging_sub;  // 关节 jog订阅
+        rclcpp::Service<space_interfaces::srv::MoveJIK>::SharedPtr movej_ik_service;    // movejik服务端
+
    
 
         void start_connect_callback(const std::shared_ptr<space_interfaces::srv::Connection::Request> request, std::shared_ptr<space_interfaces::srv::Connection::Response> response);
@@ -64,6 +68,7 @@ class space_driver:public rclcpp::Node
         void rocos_movej_offset_callback(const std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Request> request,std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Response> response);
         void joint_jogging_ser_callback(const std::shared_ptr<space_interfaces::srv::JointJogging::Request> request,std::shared_ptr<space_interfaces::srv::JointJogging::Response> response);
         void joint_jogging_sub_callback(const space_interfaces::msg::JointJoggingMsg::SharedPtr msg);
+        void movej_ik_callback(const std::shared_ptr<space_interfaces::srv::MoveJIK::Request> request,std::shared_ptr<space_interfaces::srv::MoveJIK::Response> response);
 
         bool check_isEnable_before_move();  //运动前使能检查
     public:
@@ -78,6 +83,7 @@ class space_driver:public rclcpp::Node
         void RocosMoveJOffset();// 关节空间移动偏移
         void JointJoggingSer();    // 关节 jogging
         void JointJoggingSub();    // 关节 jogging
+        void RocosMoveJIK();    // 关节空间移动（输入笛卡尔空间位姿）
         
 
 

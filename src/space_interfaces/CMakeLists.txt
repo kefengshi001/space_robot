@@ -38,6 +38,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/SpeedSet.srv"
   "srv/Switch.srv"
   "srv/MultiAxisOffset.srv"
+  "srv/MoveJIK.srv"
   # "srv/AddThreeInts.srv"
 
   DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg

@@ -98,7 +98,7 @@ void space_driver::set_enable_callback(const std::shared_ptr<space_interfaces::s
         return;
     }
 
-    if (-1 < enable_id && enable_id < (robot_ptr->getJointNum())  && request->data == true)
+    if (-1 < enable_id && enable_id < (robot_ptr->getJointNum()) && request->data == true)
     {
 
         robot_ptr->setJointEnabled(enable_id);
@@ -149,13 +149,13 @@ void space_driver::robot_state_timer_callback()
         return;
     }
 
-    robot_state_msg.jointposition = {robot_ptr->getJointPosition(0) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(1) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(2) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(3) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(4) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(5) * 180.0 / pi,
-                                     robot_ptr->getJointPosition(6) * 180.0 / pi};
+    robot_state_msg.jointposition = {static_cast<float>(robot_ptr->getJointPosition(0) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(1) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(2) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(3) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(4) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(5) * 180.0 / pi),
+                                     static_cast<float>(robot_ptr->getJointPosition(6) * 180.0 / pi)};
 
     KDL::Vector p = (robot_ptr->getFlange()).p;
     robot_state_msg.position.x = p[0];
@@ -187,14 +187,12 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     //     return;
     // }
 
-
     // if (!(this->check_isEnable_before_move()))
     // {
     //     response->success = false;
     //     response->message = "机器人未正确使能";
     //     return;
     // }
-    
 
     if (this->_speed > 0.1)
     {
@@ -209,6 +207,7 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
         response->success = false;
         response->message = "关节角速度为0,请设置速度";
         // RCLCPP_INFO(this->get_logger(), "关节角速度为0，请设置速度");
+        return;
     }
 
     // 调用MoveJ函数
@@ -229,7 +228,7 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     q(5) = robot_ptr->getJointPosition(5);
     q(6) = request->goalangle[6] * pi / 180.0;
     RCLCPP_INFO(this->get_logger(), "MoveJ执行开始");
-    robot_ptr->MoveJ(q, this->_speed);
+    robot_ptr->MoveJ(q, this->_speed, this->_accel);
     RCLCPP_INFO(this->get_logger(), "MoveJ执行结束");
     response->success = true;
     response->message = "MoveJ执行结束";
@@ -239,13 +238,12 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
 void space_driver::RocosMoveJOffset()
 {
     this->rocos_movej_offset_service = this->create_service<space_interfaces::srv::MultiAxisOffset>("multi_axis_offset",
-                                                                                            std::bind(&space_driver::rocos_movej_offset_callback, this, std::placeholders::_1, std::placeholders::_2));
+                                                                                                    std::bind(&space_driver::rocos_movej_offset_callback, this, std::placeholders::_1, std::placeholders::_2));
     RCLCPP_INFO(this->get_logger(), "RocosMoveJOffset服务端启动...");
-
 }
 
 void space_driver::rocos_movej_offset_callback(const std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Request> request,
-                                              std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Response> response)
+                                               std::shared_ptr<space_interfaces::srv::MultiAxisOffset::Response> response)
 {
     RCLCPP_INFO(this->get_logger(), "收到RocosMoveJOffset服务请求");
 
@@ -276,10 +274,54 @@ void space_driver::rocos_movej_offset_callback(const std::shared_ptr<space_inter
     q(6) = robot_ptr->getJointPosition(6) + request->offsetangle[6] * pi / 180.0;
 
     RCLCPP_INFO(this->get_logger(), "MoveJOffset执行开始");
-    robot_ptr->MoveJ(q, this->_speed);
+    robot_ptr->MoveJ(q, this->_speed, this->_accel);
     RCLCPP_INFO(this->get_logger(), "MoveJOffset执行结束");
     response->success = true;
     response->message = "MoveJOffset执行结束";
+}
+
+void space_driver::RocosMoveJIK()
+{
+    this->movej_ik_service = this->create_service<space_interfaces::srv::MoveJIK>("movej_ik",
+                                                                                  std::bind(&space_driver::movej_ik_callback, this, std::placeholders::_1, std::placeholders::_2));
+    RCLCPP_INFO(this->get_logger(), "RocosMoveJIK服务端启动...");
+}
+
+void space_driver::movej_ik_callback(const std::shared_ptr<space_interfaces::srv::MoveJIK::Request> request,
+                                     std::shared_ptr<space_interfaces::srv::MoveJIK::Response> response)
+{
+    RCLCPP_INFO(this->get_logger(), "收到MoveJIK服务请求");
+
+    if (this->_speed > 0.1)
+    {
+        response->success = false;
+        response->message = "关节角速度过大";
+        // RCLCPP_INFO(this->get_logger(), "关节角速度过大，请重新赋值");
+        return;
+    }
+
+    if (this->_speed == 0)
+    {
+        response->success = false;
+        response->message = "关节角速度为0,请设置速度";
+        // RCLCPP_INFO(this->get_logger(), "关节角速度为0，请设置速度");
+        return;
+    }
+
+    KDL::Frame init_frame = robot_ptr->getFlange();
+
+    // 当前机器人只在平面运动，故限制y方向和姿态的值
+    init_frame.p(0) = request->goalposition.x; // 修改x
+    // init_frame.p(1) = request->goalposition.y  //修改y
+    init_frame.p(2) = request->goalposition.z; // 修改z
+    // init_frame.M = KDL::Rotation::RPY(request->goalposition[3], request->goalposition[4], request->goalposition[5]);
+
+    RCLCPP_INFO(this->get_logger(), "MoveJIK执行开始");
+    robot_ptr->MoveJ_IK(init_frame, this->_speed, this->_accel);
+    RCLCPP_INFO(this->get_logger(), "MoveJIK执行结束");
+    response->success = true;
+    response->message = "MoveJIK执行结束";
+
 
 }
 
@@ -297,7 +339,7 @@ void space_driver::joint_jogging_ser_callback(const std::shared_ptr<space_interf
 
     std::string joint = request->joint;
     int _id = joint[(joint.size() - 1)] - '1';
-    //使能检查
+    // 使能检查
     if (!(robot_ptr->isEnabled()))
     {
         RCLCPP_INFO(this->get_logger(), "机器人未使能，请先使能机器人");
@@ -347,17 +389,17 @@ void space_driver::JointJoggingSub()
 
 void space_driver::joint_jogging_sub_callback(const space_interfaces::msg::JointJoggingMsg::SharedPtr msg)
 {
-    
+
     std::string joint = msg->joint;
     int _id = joint[(joint.size() - 1)] - '1';
 
-    //单关节使能检查
-    if (robot_ptr -> isJointEnabled(_id) == false)
+    // 单关节使能检查
+    if (robot_ptr->isJointEnabled(_id) == false)
     {
-        RCLCPP_INFO(this->get_logger(), "关节 %d 未使能", _id+1);
+        RCLCPP_INFO(this->get_logger(), "关节 %d 未使能", _id + 1);
         return;
     }
-    
+
     if (msg->run == true)
     {
         if (msg->signal == true)
@@ -391,21 +433,18 @@ bool space_driver::check_isEnable_before_move()
         {
             if (robot_ptr->isJointEnabled(i) == true)
             {
-                RCLCPP_INFO(this->get_logger(), "joint%d使能,请先关闭使能",i+1);
+                RCLCPP_INFO(this->get_logger(), "joint%d使能,请先关闭使能", i + 1);
                 return false;
             }
-            
         }
         else
         {
             if (robot_ptr->isJointEnabled(i) == false)
             {
-                RCLCPP_INFO(this->get_logger(), "joint%d未使能,请使能",i+1);
+                RCLCPP_INFO(this->get_logger(), "joint%d未使能,请使能", i + 1);
                 return false;
             }
         }
-        
     }
     return true;
-
 }
