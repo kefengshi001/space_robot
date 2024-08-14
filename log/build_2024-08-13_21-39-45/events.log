@@ -1,0 +1,738 @@
+[0.000000] (-) TimerEvent: {}
+[0.000563] (space_interfaces) JobQueued: {'identifier': 'space_interfaces', 'dependencies': OrderedDict()}
+[0.001485] (space_driver) JobQueued: {'identifier': 'space_driver', 'dependencies': OrderedDict([('space_interfaces', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces')])}
+[0.002396] (space_interfaces) JobStarted: {'identifier': 'space_interfaces'}
+[0.033069] (space_interfaces) JobProgress: {'identifier': 'space_interfaces', 'progress': 'cmake'}
+[0.035480] (space_interfaces) JobProgress: {'identifier': 'space_interfaces', 'progress': 'build'}
+[0.038048] (space_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/landau/Documents/GitHub/space_robot/build/space_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/landau/Documents/GitHub/space_robot/build/space_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'landau'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1616'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/landau'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/landau/Documents/GitHub/space_robot/build'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1519'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2209'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'landau'), ('JOURNAL_STREAM', '8:45232'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'landau'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/landau-Robotics:@/tmp/.ICE-unix/1662,unix/landau-Robotics:/tmp/.ICE-unix/1662'), ('INVOCATION_ID', '37d1ff0c35f24b3a9d3e695b1d07d8a5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-23256eee4b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '66'), ('AMENT_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/landau/Documents/GitHub/space_robot/build/space_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy')]), 'shell': False}
+[0.099459] (-) TimerEvent: {}
+[0.200321] (-) TimerEvent: {}
+[0.234972] (space_interfaces) StdoutLine: {'line': b'[  0%] Built target space_interfaces__cpp\n'}
+[0.251984] (space_interfaces) StdoutLine: {'line': b'[ 12%] Built target space_interfaces__rosidl_generator_c\n'}
+[0.300907] (-) TimerEvent: {}
+[0.344535] (space_interfaces) StdoutLine: {'line': b'[ 24%] Built target space_interfaces__rosidl_typesupport_cpp\n'}
+[0.351446] (space_interfaces) StdoutLine: {'line': b'[ 36%] Built target space_interfaces__rosidl_typesupport_c\n'}
+[0.354524] (space_interfaces) StdoutLine: {'line': b'[ 48%] Built target space_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.356307] (space_interfaces) StdoutLine: {'line': b'[ 60%] Built target space_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.362790] (space_interfaces) StdoutLine: {'line': b'[ 71%] Built target space_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.401156] (-) TimerEvent: {}
+[0.481756] (space_interfaces) StdoutLine: {'line': b'[ 83%] Built target space_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.501300] (-) TimerEvent: {}
+[0.551278] (space_interfaces) StdoutLine: {'line': b'[ 83%] Built target space_interfaces\n'}
+[0.601519] (-) TimerEvent: {}
+[0.618391] (space_interfaces) StdoutLine: {'line': b'[ 84%] Built target space_interfaces__py\n'}
+[0.701713] (-) TimerEvent: {}
+[0.727257] (space_interfaces) StdoutLine: {'line': b'[ 95%] Built target space_interfaces__python\n'}
+[0.801878] (-) TimerEvent: {}
+[0.817444] (space_interfaces) StdoutLine: {'line': b'[ 96%] Built target space_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.822058] (space_interfaces) StdoutLine: {'line': b'[ 98%] Built target space_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.823003] (space_interfaces) StdoutLine: {'line': b'[100%] Built target space_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.865030] (space_interfaces) CommandEnded: {'returncode': 0}
+[0.902041] (-) TimerEvent: {}
+[1.002561] (-) TimerEvent: {}
+[1.103455] (-) TimerEvent: {}
+[1.203920] (-) TimerEvent: {}
+[1.304349] (-) TimerEvent: {}
+[1.405145] (-) TimerEvent: {}
+[1.505780] (-) TimerEvent: {}
+[1.562464] (space_interfaces) JobProgress: {'identifier': 'space_interfaces', 'progress': 'install'}
+[1.602770] (space_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/landau/Documents/GitHub/space_robot/build/space_interfaces'], 'cwd': '/home/landau/Documents/GitHub/space_robot/build/space_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'landau'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1616'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/landau'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/landau/Documents/GitHub/space_robot/build'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1519'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2209'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'landau'), ('JOURNAL_STREAM', '8:45232'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'landau'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/landau-Robotics:@/tmp/.ICE-unix/1662,unix/landau-Robotics:/tmp/.ICE-unix/1662'), ('INVOCATION_ID', '37d1ff0c35f24b3a9d3e695b1d07d8a5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-23256eee4b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '66'), ('AMENT_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/landau/Documents/GitHub/space_robot/build/space_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy')]), 'shell': False}
+[1.609387] (-) TimerEvent: {}
+[1.634025] (space_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.634741] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/ament_index/resource_index/rosidl_interfaces/space_interfaces\n'}
+[1.635771] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.636831] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.637869] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/joint_jogging_msg.h\n'}
+[1.638734] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.639408] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__type_support.h\n'}
+[1.640406] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__struct.h\n'}
+[1.641051] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__functions.h\n'}
+[1.641493] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__functions.c\n'}
+[1.641823] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__struct.h\n'}
+[1.642095] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__functions.c\n'}
+[1.642433] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__functions.h\n'}
+[1.642636] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__type_support.h\n'}
+[1.642972] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/robot_state.h\n'}
+[1.643319] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.643951] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.644426] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/connection.h\n'}
+[1.644755] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/joint_enable.h\n'}
+[1.645044] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/joint_jogging.h\n'}
+[1.645404] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/cartesian_jogging.h\n'}
+[1.645605] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/multi_axis.h\n'}
+[1.646014] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.646598] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__functions.h\n'}
+[1.647311] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__functions.h\n'}
+[1.648103] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__functions.c\n'}
+[1.648559] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__type_support.h\n'}
+[1.649421] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__type_support.h\n'}
+[1.649888] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__struct.h\n'}
+[1.650312] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__functions.h\n'}
+[1.650810] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__struct.h\n'}
+[1.651026] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__functions.c\n'}
+[1.651202] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__type_support.h\n'}
+[1.651370] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__struct.h\n'}
+[1.651650] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__struct.h\n'}
+[1.652235] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__struct.h\n'}
+[1.652950] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__type_support.h\n'}
+[1.653560] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__struct.h\n'}
+[1.654321] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__functions.c\n'}
+[1.655094] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__type_support.h\n'}
+[1.655563] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__functions.c\n'}
+[1.656192] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__functions.c\n'}
+[1.656553] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__functions.h\n'}
+[1.657101] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__type_support.h\n'}
+[1.657517] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__functions.c\n'}
+[1.658072] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__functions.h\n'}
+[1.658525] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__struct.h\n'}
+[1.659246] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__functions.h\n'}
+[1.659721] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__functions.h\n'}
+[1.660133] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__functions.h\n'}
+[1.660596] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__functions.h\n'}
+[1.664228] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__type_support.h\n'}
+[1.664925] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__type_support.h\n'}
+[1.665539] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__struct.h\n'}
+[1.666169] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__struct.h\n'}
+[1.666509] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__functions.c\n'}
+[1.667387] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__type_support.h\n'}
+[1.667892] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__functions.c\n'}
+[1.668108] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__functions.c\n'}
+[1.668311] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/speed_set.h\n'}
+[1.668484] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/cartesian_movement.h\n'}
+[1.668738] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/multi_axis_offset.h\n'}
+[1.669007] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/switch.h\n'}
+[1.669171] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/library_path.sh\n'}
+[1.669329] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/library_path.dsv\n'}
+[1.669486] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_generator_c.so\n'}
+[1.669639] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.669848] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.670005] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.670173] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.670407] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.670564] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[1.670769] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.670956] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.671206] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__rosidl_typesupport_fastrtps_c.h\n'}
+[1.671454] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__rosidl_typesupport_fastrtps_c.h\n'}
+[1.671833] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__rosidl_typesupport_fastrtps_c.h\n'}
+[1.672123] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__rosidl_typesupport_fastrtps_c.h\n'}
+[1.672317] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__rosidl_typesupport_fastrtps_c.h\n'}
+[1.672478] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__rosidl_typesupport_fastrtps_c.h\n'}
+[1.672635] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__rosidl_typesupport_fastrtps_c.h\n'}
+[1.672840] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__rosidl_typesupport_fastrtps_c.h\n'}
+[1.673002] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__rosidl_typesupport_fastrtps_c.h\n'}
+[1.673189] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.673346] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.673498] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.673652] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.673840] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.673992] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/dds_fastrtps\n'}
+[1.674145] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.674298] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.674453] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.674607] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.674790] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/dds_fastrtps\n'}
+[1.674947] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675102] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675272] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675425] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675579] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675795] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.675958] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.676110] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.676264] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.676418] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.676571] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.676778] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.676944] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.677100] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.677255] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__type_support.c\n'}
+[1.677435] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__rosidl_typesupport_introspection_c.h\n'}
+[1.677768] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__type_support.c\n'}
+[1.677954] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__rosidl_typesupport_introspection_c.h\n'}
+[1.678112] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.678266] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.678417] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__rosidl_typesupport_introspection_c.h\n'}
+[1.678588] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__type_support.c\n'}
+[1.678830] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__rosidl_typesupport_introspection_c.h\n'}
+[1.679085] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__rosidl_typesupport_introspection_c.h\n'}
+[1.679291] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__type_support.c\n'}
+[1.679459] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__type_support.c\n'}
+[1.679617] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__type_support.c\n'}
+[1.679830] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__rosidl_typesupport_introspection_c.h\n'}
+[1.679991] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__type_support.c\n'}
+[1.680176] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__rosidl_typesupport_introspection_c.h\n'}
+[1.680479] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__rosidl_typesupport_introspection_c.h\n'}
+[1.680793] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__rosidl_typesupport_introspection_c.h\n'}
+[1.681090] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__rosidl_typesupport_introspection_c.h\n'}
+[1.681274] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__type_support.c\n'}
+[1.681435] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__type_support.c\n'}
+[1.681595] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__type_support.c\n'}
+[1.681809] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__rosidl_typesupport_introspection_c.h\n'}
+[1.681977] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__type_support.c\n'}
+[1.682134] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.682408] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_c.so\n'}
+[1.682773] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.683124] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.683397] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/robot_state.hpp\n'}
+[1.683720] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/joint_jogging_msg.hpp\n'}
+[1.683982] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.684172] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__struct.hpp\n'}
+[1.684330] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__builder.hpp\n'}
+[1.684488] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__type_support.hpp\n'}
+[1.684644] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__traits.hpp\n'}
+[1.684859] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__struct.hpp\n'}
+[1.685038] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__type_support.hpp\n'}
+[1.685193] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__traits.hpp\n'}
+[1.685349] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__builder.hpp\n'}
+[1.685504] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.685729] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.685915] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/joint_jogging.hpp\n'}
+[1.686072] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/speed_set.hpp\n'}
+[1.686246] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/cartesian_movement.hpp\n'}
+[1.686401] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/connection.hpp\n'}
+[1.686556] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/multi_axis_offset.hpp\n'}
+[1.686754] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.686921] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__builder.hpp\n'}
+[1.687093] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__type_support.hpp\n'}
+[1.687267] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__builder.hpp\n'}
+[1.687429] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__builder.hpp\n'}
+[1.687712] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__type_support.hpp\n'}
+[1.687895] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__struct.hpp\n'}
+[1.688051] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__type_support.hpp\n'}
+[1.688206] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__traits.hpp\n'}
+[1.688389] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__builder.hpp\n'}
+[1.688548] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__type_support.hpp\n'}
+[1.688734] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__traits.hpp\n'}
+[1.688906] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__builder.hpp\n'}
+[1.689091] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__struct.hpp\n'}
+[1.689246] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__struct.hpp\n'}
+[1.689399] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__traits.hpp\n'}
+[1.689650] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__struct.hpp\n'}
+[1.689947] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__type_support.hpp\n'}
+[1.690183] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__traits.hpp\n'}
+[1.690475] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__type_support.hpp\n'}
+[1.690835] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__traits.hpp\n'}
+[1.691208] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__struct.hpp\n'}
+[1.691548] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__traits.hpp\n'}
+[1.691845] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__struct.hpp\n'}
+[1.692038] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__type_support.hpp\n'}
+[1.692204] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__struct.hpp\n'}
+[1.692430] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__type_support.hpp\n'}
+[1.692744] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__builder.hpp\n'}
+[1.692964] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__struct.hpp\n'}
+[1.693130] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__traits.hpp\n'}
+[1.693290] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__builder.hpp\n'}
+[1.693478] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__traits.hpp\n'}
+[1.693761] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__builder.hpp\n'}
+[1.693937] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__builder.hpp\n'}
+[1.694119] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__type_support.hpp\n'}
+[1.694451] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__traits.hpp\n'}
+[1.694818] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__struct.hpp\n'}
+[1.695047] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/switch.hpp\n'}
+[1.695496] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/joint_enable.hpp\n'}
+[1.696233] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/cartesian_jogging.hpp\n'}
+[1.696999] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/multi_axis.hpp\n'}
+[1.697585] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces\n'}
+[1.697895] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg\n'}
+[1.698080] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail\n'}
+[1.698240] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.698426] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.698654] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/robot_state__type_support.cpp\n'}
+[1.698887] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/msg/detail/joint_jogging_msg__type_support.cpp\n'}
+[1.699046] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv\n'}
+[1.699258] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail\n'}
+[1.699448] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.699762] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__type_support.cpp\n'}
+[1.699962] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.700172] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_enable__type_support.cpp\n'}
+[1.700546] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.700905] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.701170] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__type_support.cpp\n'}
+[1.701369] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.701536] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis_offset__type_support.cpp\n'}
+[1.701770] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__type_support.cpp\n'}
+[1.701935] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.702091] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/connection__type_support.cpp\n'}
+[1.702244] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/joint_jogging__type_support.cpp\n'}
+[1.702418] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_jogging__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.702633] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/multi_axis__type_support.cpp\n'}
+[1.702858] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/cartesian_movement__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.703020] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/switch__type_support.cpp\n'}
+[1.703178] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/include/space_interfaces/srv/detail/speed_set__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.703332] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.703521] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.703815] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/pythonpath.sh\n'}
+[1.704057] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/pythonpath.dsv\n'}
+[1.704220] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/__init__.py\n'}
+[1.709524] (-) TimerEvent: {}
+[1.769120] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg\n'}
+[1.769773] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg/__init__.py\n'}
+[1.770273] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg/_joint_jogging_msg.py\n'}
+[1.770717] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg/_joint_jogging_msg_s.c\n'}
+[1.771117] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg/_robot_state.py\n'}
+[1.771491] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/msg/_robot_state_s.c\n'}
+[1.771886] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv\n'}
+[1.772144] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_joint_enable_s.c\n'}
+[1.772395] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_multi_axis_offset_s.c\n'}
+[1.772738] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_connection_s.c\n'}
+[1.772944] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/__init__.py\n'}
+[1.773101] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_connection.py\n'}
+[1.773261] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_cartesian_jogging_s.c\n'}
+[1.773417] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_cartesian_jogging.py\n'}
+[1.773572] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_joint_jogging.py\n'}
+[1.773774] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_multi_axis_s.c\n'}
+[1.773940] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_multi_axis.py\n'}
+[1.774092] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_switch_s.c\n'}
+[1.774247] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_joint_jogging_s.c\n'}
+[1.774401] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_speed_set_s.c\n'}
+[1.774719] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_cartesian_movement.py\n'}
+[1.774906] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_multi_axis_offset.py\n'}
+[1.775062] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_joint_enable.py\n'}
+[1.775216] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_switch.py\n'}
+[1.775402] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_cartesian_movement_s.c\n'}
+[1.775558] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/srv/_speed_set.py\n'}
+[1.775741] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/space_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.775912] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/space_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.776323] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages/space_interfaces/space_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[1.777921] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/libspace_interfaces__python.so\n'}
+[1.778619] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/msg/JointJoggingMsg.idl\n'}
+[1.779018] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/msg/RobotState.idl\n'}
+[1.779503] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianJogging.idl\n'}
+[1.779909] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianMovement.idl\n'}
+[1.780318] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Connection.idl\n'}
+[1.780828] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointEnable.idl\n'}
+[1.781232] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointJogging.idl\n'}
+[1.781640] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxis.idl\n'}
+[1.782153] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/SpeedSet.idl\n'}
+[1.782569] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Switch.idl\n'}
+[1.783120] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxisOffset.idl\n'}
+[1.783420] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/msg/JointJoggingMsg.msg\n'}
+[1.783827] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/msg/RobotState.msg\n'}
+[1.784098] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianJogging.srv\n'}
+[1.784387] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianJogging_Request.msg\n'}
+[1.784879] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianJogging_Response.msg\n'}
+[1.785278] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianMovement.srv\n'}
+[1.785734] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianMovement_Request.msg\n'}
+[1.786047] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/CartesianMovement_Response.msg\n'}
+[1.786346] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Connection.srv\n'}
+[1.786606] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Connection_Request.msg\n'}
+[1.787031] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Connection_Response.msg\n'}
+[1.787393] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointEnable.srv\n'}
+[1.787818] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointEnable_Request.msg\n'}
+[1.788264] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointEnable_Response.msg\n'}
+[1.788577] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointJogging.srv\n'}
+[1.788958] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointJogging_Request.msg\n'}
+[1.789343] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/JointJogging_Response.msg\n'}
+[1.789754] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxis.srv\n'}
+[1.790157] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxis_Request.msg\n'}
+[1.790413] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxis_Response.msg\n'}
+[1.790758] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/SpeedSet.srv\n'}
+[1.790938] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/SpeedSet_Request.msg\n'}
+[1.791171] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/SpeedSet_Response.msg\n'}
+[1.791476] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Switch.srv\n'}
+[1.791761] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Switch_Request.msg\n'}
+[1.792014] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/Switch_Response.msg\n'}
+[1.792254] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxisOffset.srv\n'}
+[1.792413] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxisOffset_Request.msg\n'}
+[1.792756] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/srv/MultiAxisOffset_Response.msg\n'}
+[1.793101] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/ament_index/resource_index/package_run_dependencies/space_interfaces\n'}
+[1.793372] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/ament_index/resource_index/parent_prefix_path/space_interfaces\n'}
+[1.793555] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/ament_prefix_path.sh\n'}
+[1.793772] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/ament_prefix_path.dsv\n'}
+[1.794110] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/path.sh\n'}
+[1.794275] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/environment/path.dsv\n'}
+[1.794539] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/local_setup.bash\n'}
+[1.794903] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/local_setup.sh\n'}
+[1.795617] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/local_setup.zsh\n'}
+[1.796548] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/local_setup.dsv\n'}
+[1.797465] (space_interfaces) StdoutLine: {'line': b'-- Installing: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/package.dsv\n'}
+[1.797874] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/ament_index/resource_index/packages/space_interfaces\n'}
+[1.798271] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_generator_cExport.cmake\n'}
+[1.798536] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.798842] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.799022] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.799239] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[1.799430] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.799596] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_generator_cppExport.cmake\n'}
+[1.799890] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.800210] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.800519] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[1.800807] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.800985] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[1.801153] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.801318] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.801483] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.801647] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.801858] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.802020] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.802176] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfacesConfig.cmake\n'}
+[1.802356] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake/space_interfacesConfig-version.cmake\n'}
+[1.802514] (space_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/package.xml\n'}
+[1.805640] (space_interfaces) CommandEnded: {'returncode': 0}
+[1.809778] (-) TimerEvent: {}
+[1.910433] (-) TimerEvent: {}
+[2.011125] (-) TimerEvent: {}
+[2.111550] (-) TimerEvent: {}
+[2.212015] (-) TimerEvent: {}
+[2.312466] (-) TimerEvent: {}
+[2.412983] (-) TimerEvent: {}
+[2.513446] (-) TimerEvent: {}
+[2.559288] (space_interfaces) JobEnded: {'identifier': 'space_interfaces', 'rc': 0}
+[2.560754] (space_driver) JobStarted: {'identifier': 'space_driver'}
+[2.587816] (space_driver) JobProgress: {'identifier': 'space_driver', 'progress': 'cmake'}
+[2.590164] (space_driver) JobProgress: {'identifier': 'space_driver', 'progress': 'build'}
+[2.595422] (space_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/landau/Documents/GitHub/space_robot/build/space_driver', '--', '-j8', '-l8'], 'cwd': '/home/landau/Documents/GitHub/space_robot/build/space_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'landau'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1616'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/landau'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/landau/Documents/GitHub/space_robot/build'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1519'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2209'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'landau'), ('JOURNAL_STREAM', '8:45232'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'landau'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/landau-Robotics:@/tmp/.ICE-unix/1662,unix/landau-Robotics:/tmp/.ICE-unix/1662'), ('INVOCATION_ID', '37d1ff0c35f24b3a9d3e695b1d07d8a5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-23256eee4b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '84'), ('AMENT_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/landau/Documents/GitHub/space_robot/build/space_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy')]), 'shell': False}
+[2.613938] (-) TimerEvent: {}
+[2.714611] (-) TimerEvent: {}
+[2.781213] (space_driver) StdoutLine: {'line': b'[ 20%] Built target gflags_nothreads_static\n'}
+[2.814804] (-) TimerEvent: {}
+[2.844884] (space_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target demo\x1b[0m\n'}
+[2.880334] (space_driver) StdoutLine: {'line': b'[ 30%] Built target gflags_unittest-main\n'}
+[2.899436] (space_driver) StdoutLine: {'line': b'[ 45%] Built target gflags_declare_test\n'}
+[2.900127] (space_driver) StdoutLine: {'line': b'[ 55%] Built target gflags_unittest_main\n'}
+[2.913554] (space_driver) StdoutLine: {'line': b'[ 65%] Built target gflags_strip_flags_test\n'}
+[2.914892] (-) TimerEvent: {}
+[2.930905] (space_driver) StdoutLine: {'line': b'[ 75%] Built target gflags_unittest\n'}
+[2.977375] (space_driver) StdoutLine: {'line': b'[ 90%] Built target main\n'}
+[3.007194] (space_driver) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/demo.dir/src/demo.cpp.o\x1b[0m\n'}
+[3.015035] (-) TimerEvent: {}
+[3.115539] (-) TimerEvent: {}
+[3.216039] (-) TimerEvent: {}
+[3.316485] (-) TimerEvent: {}
+[3.417016] (-) TimerEvent: {}
+[3.517521] (-) TimerEvent: {}
+[3.617993] (-) TimerEvent: {}
+[3.718534] (-) TimerEvent: {}
+[3.819020] (-) TimerEvent: {}
+[3.919525] (-) TimerEvent: {}
+[4.020039] (-) TimerEvent: {}
+[4.120536] (-) TimerEvent: {}
+[4.221098] (-) TimerEvent: {}
+[4.321622] (-) TimerEvent: {}
+[4.422120] (-) TimerEvent: {}
+[4.522652] (-) TimerEvent: {}
+[4.623220] (-) TimerEvent: {}
+[4.723776] (-) TimerEvent: {}
+[4.824289] (-) TimerEvent: {}
+[4.924788] (-) TimerEvent: {}
+[5.025347] (-) TimerEvent: {}
+[5.125835] (-) TimerEvent: {}
+[5.226417] (-) TimerEvent: {}
+[5.326915] (-) TimerEvent: {}
+[5.427441] (-) TimerEvent: {}
+[5.527959] (-) TimerEvent: {}
+[5.628507] (-) TimerEvent: {}
+[5.729045] (-) TimerEvent: {}
+[5.829602] (-) TimerEvent: {}
+[5.930169] (-) TimerEvent: {}
+[6.030763] (-) TimerEvent: {}
+[6.131254] (-) TimerEvent: {}
+[6.231780] (-) TimerEvent: {}
+[6.332357] (-) TimerEvent: {}
+[6.433268] (-) TimerEvent: {}
+[6.533953] (-) TimerEvent: {}
+[6.634518] (-) TimerEvent: {}
+[6.735060] (-) TimerEvent: {}
+[6.835575] (-) TimerEvent: {}
+[6.936077] (-) TimerEvent: {}
+[7.036532] (-) TimerEvent: {}
+[7.137190] (-) TimerEvent: {}
+[7.237703] (-) TimerEvent: {}
+[7.338152] (-) TimerEvent: {}
+[7.438653] (-) TimerEvent: {}
+[7.539221] (-) TimerEvent: {}
+[7.639726] (-) TimerEvent: {}
+[7.740247] (-) TimerEvent: {}
+[7.840772] (-) TimerEvent: {}
+[7.941364] (-) TimerEvent: {}
+[8.041905] (-) TimerEvent: {}
+[8.142335] (-) TimerEvent: {}
+[8.242853] (-) TimerEvent: {}
+[8.343399] (-) TimerEvent: {}
+[8.443919] (-) TimerEvent: {}
+[8.544503] (-) TimerEvent: {}
+[8.645464] (-) TimerEvent: {}
+[8.746619] (-) TimerEvent: {}
+[8.847644] (-) TimerEvent: {}
+[8.948210] (-) TimerEvent: {}
+[9.048741] (-) TimerEvent: {}
+[9.149271] (-) TimerEvent: {}
+[9.250178] (-) TimerEvent: {}
+[9.350819] (-) TimerEvent: {}
+[9.451415] (-) TimerEvent: {}
+[9.551898] (-) TimerEvent: {}
+[9.652317] (-) TimerEvent: {}
+[9.752832] (-) TimerEvent: {}
+[9.853379] (-) TimerEvent: {}
+[9.953901] (-) TimerEvent: {}
+[10.054445] (-) TimerEvent: {}
+[10.154919] (-) TimerEvent: {}
+[10.255440] (-) TimerEvent: {}
+[10.355851] (-) TimerEvent: {}
+[10.456392] (-) TimerEvent: {}
+[10.556877] (-) TimerEvent: {}
+[10.657398] (-) TimerEvent: {}
+[10.757876] (-) TimerEvent: {}
+[10.858408] (-) TimerEvent: {}
+[10.958885] (-) TimerEvent: {}
+[11.059415] (-) TimerEvent: {}
+[11.159897] (-) TimerEvent: {}
+[11.260416] (-) TimerEvent: {}
+[11.360964] (-) TimerEvent: {}
+[11.461560] (-) TimerEvent: {}
+[11.562181] (-) TimerEvent: {}
+[11.663456] (-) TimerEvent: {}
+[11.764300] (-) TimerEvent: {}
+[11.864791] (-) TimerEvent: {}
+[11.965316] (-) TimerEvent: {}
+[12.065870] (-) TimerEvent: {}
+[12.166657] (-) TimerEvent: {}
+[12.267461] (-) TimerEvent: {}
+[12.368037] (-) TimerEvent: {}
+[12.468567] (-) TimerEvent: {}
+[12.569017] (-) TimerEvent: {}
+[12.669566] (-) TimerEvent: {}
+[12.770031] (-) TimerEvent: {}
+[12.870565] (-) TimerEvent: {}
+[12.971072] (-) TimerEvent: {}
+[13.071597] (-) TimerEvent: {}
+[13.172082] (-) TimerEvent: {}
+[13.272608] (-) TimerEvent: {}
+[13.373077] (-) TimerEvent: {}
+[13.473615] (-) TimerEvent: {}
+[13.574096] (-) TimerEvent: {}
+[13.674623] (-) TimerEvent: {}
+[13.775107] (-) TimerEvent: {}
+[13.875656] (-) TimerEvent: {}
+[13.976106] (-) TimerEvent: {}
+[14.076698] (-) TimerEvent: {}
+[14.177116] (-) TimerEvent: {}
+[14.277694] (-) TimerEvent: {}
+[14.378155] (-) TimerEvent: {}
+[14.478710] (-) TimerEvent: {}
+[14.579172] (-) TimerEvent: {}
+[14.679715] (-) TimerEvent: {}
+[14.780190] (-) TimerEvent: {}
+[14.880679] (-) TimerEvent: {}
+[14.981141] (-) TimerEvent: {}
+[15.081655] (-) TimerEvent: {}
+[15.182166] (-) TimerEvent: {}
+[15.282709] (-) TimerEvent: {}
+[15.383179] (-) TimerEvent: {}
+[15.483718] (-) TimerEvent: {}
+[15.584152] (-) TimerEvent: {}
+[15.684689] (-) TimerEvent: {}
+[15.785144] (-) TimerEvent: {}
+[15.885740] (-) TimerEvent: {}
+[15.986137] (-) TimerEvent: {}
+[16.086658] (-) TimerEvent: {}
+[16.187138] (-) TimerEvent: {}
+[16.287608] (-) TimerEvent: {}
+[16.388071] (-) TimerEvent: {}
+[16.488546] (-) TimerEvent: {}
+[16.589053] (-) TimerEvent: {}
+[16.689525] (-) TimerEvent: {}
+[16.790022] (-) TimerEvent: {}
+[16.890523] (-) TimerEvent: {}
+[16.991068] (-) TimerEvent: {}
+[17.091597] (-) TimerEvent: {}
+[17.192090] (-) TimerEvent: {}
+[17.292681] (-) TimerEvent: {}
+[17.393174] (-) TimerEvent: {}
+[17.493660] (-) TimerEvent: {}
+[17.594126] (-) TimerEvent: {}
+[17.694642] (-) TimerEvent: {}
+[17.795112] (-) TimerEvent: {}
+[17.895570] (-) TimerEvent: {}
+[17.996043] (-) TimerEvent: {}
+[18.096585] (-) TimerEvent: {}
+[18.197078] (-) TimerEvent: {}
+[18.297618] (-) TimerEvent: {}
+[18.398068] (-) TimerEvent: {}
+[18.498541] (-) TimerEvent: {}
+[18.599018] (-) TimerEvent: {}
+[18.699545] (-) TimerEvent: {}
+[18.800007] (-) TimerEvent: {}
+[18.900511] (-) TimerEvent: {}
+[19.000965] (-) TimerEvent: {}
+[19.101434] (-) TimerEvent: {}
+[19.201905] (-) TimerEvent: {}
+[19.302388] (-) TimerEvent: {}
+[19.402873] (-) TimerEvent: {}
+[19.503407] (-) TimerEvent: {}
+[19.603830] (-) TimerEvent: {}
+[19.704357] (-) TimerEvent: {}
+[19.804772] (-) TimerEvent: {}
+[19.905311] (-) TimerEvent: {}
+[20.005765] (-) TimerEvent: {}
+[20.106298] (-) TimerEvent: {}
+[20.206745] (-) TimerEvent: {}
+[20.307267] (-) TimerEvent: {}
+[20.407748] (-) TimerEvent: {}
+[20.508233] (-) TimerEvent: {}
+[20.608723] (-) TimerEvent: {}
+[20.709170] (-) TimerEvent: {}
+[20.809716] (-) TimerEvent: {}
+[20.910145] (-) TimerEvent: {}
+[21.010759] (-) TimerEvent: {}
+[21.111277] (-) TimerEvent: {}
+[21.211750] (-) TimerEvent: {}
+[21.312286] (-) TimerEvent: {}
+[21.412768] (-) TimerEvent: {}
+[21.513296] (-) TimerEvent: {}
+[21.613755] (-) TimerEvent: {}
+[21.714238] (-) TimerEvent: {}
+[21.814788] (-) TimerEvent: {}
+[21.915230] (-) TimerEvent: {}
+[22.015764] (-) TimerEvent: {}
+[22.116252] (-) TimerEvent: {}
+[22.216738] (-) TimerEvent: {}
+[22.317212] (-) TimerEvent: {}
+[22.417688] (-) TimerEvent: {}
+[22.518162] (-) TimerEvent: {}
+[22.618715] (-) TimerEvent: {}
+[22.719181] (-) TimerEvent: {}
+[22.819747] (-) TimerEvent: {}
+[22.920189] (-) TimerEvent: {}
+[23.020737] (-) TimerEvent: {}
+[23.121196] (-) TimerEvent: {}
+[23.221743] (-) TimerEvent: {}
+[23.322217] (-) TimerEvent: {}
+[23.423533] (-) TimerEvent: {}
+[23.524073] (-) TimerEvent: {}
+[23.624559] (-) TimerEvent: {}
+[23.725025] (-) TimerEvent: {}
+[23.825522] (-) TimerEvent: {}
+[23.926019] (-) TimerEvent: {}
+[24.026508] (-) TimerEvent: {}
+[24.126971] (-) TimerEvent: {}
+[24.227554] (-) TimerEvent: {}
+[24.328052] (-) TimerEvent: {}
+[24.428496] (-) TimerEvent: {}
+[24.529017] (-) TimerEvent: {}
+[24.629462] (-) TimerEvent: {}
+[24.730011] (-) TimerEvent: {}
+[24.830446] (-) TimerEvent: {}
+[24.930958] (-) TimerEvent: {}
+[25.031467] (-) TimerEvent: {}
+[25.131976] (-) TimerEvent: {}
+[25.232478] (-) TimerEvent: {}
+[25.332995] (-) TimerEvent: {}
+[25.433511] (-) TimerEvent: {}
+[25.534091] (-) TimerEvent: {}
+[25.634554] (-) TimerEvent: {}
+[25.735030] (-) TimerEvent: {}
+[25.835524] (-) TimerEvent: {}
+[25.935989] (-) TimerEvent: {}
+[26.036452] (-) TimerEvent: {}
+[26.136905] (-) TimerEvent: {}
+[26.237400] (-) TimerEvent: {}
+[26.337926] (-) TimerEvent: {}
+[26.438366] (-) TimerEvent: {}
+[26.538780] (-) TimerEvent: {}
+[26.639256] (-) TimerEvent: {}
+[26.739784] (-) TimerEvent: {}
+[26.840304] (-) TimerEvent: {}
+[26.940778] (-) TimerEvent: {}
+[27.041244] (-) TimerEvent: {}
+[27.141749] (-) TimerEvent: {}
+[27.242174] (-) TimerEvent: {}
+[27.342625] (-) TimerEvent: {}
+[27.443151] (-) TimerEvent: {}
+[27.543640] (-) TimerEvent: {}
+[27.644128] (-) TimerEvent: {}
+[27.744613] (-) TimerEvent: {}
+[27.845109] (-) TimerEvent: {}
+[27.945616] (-) TimerEvent: {}
+[28.046093] (-) TimerEvent: {}
+[28.146554] (-) TimerEvent: {}
+[28.247074] (-) TimerEvent: {}
+[28.347569] (-) TimerEvent: {}
+[28.448102] (-) TimerEvent: {}
+[28.548611] (-) TimerEvent: {}
+[28.649128] (-) TimerEvent: {}
+[28.749589] (-) TimerEvent: {}
+[28.850193] (-) TimerEvent: {}
+[28.950708] (-) TimerEvent: {}
+[29.051173] (-) TimerEvent: {}
+[29.151615] (-) TimerEvent: {}
+[29.252077] (-) TimerEvent: {}
+[29.352556] (-) TimerEvent: {}
+[29.453041] (-) TimerEvent: {}
+[29.553511] (-) TimerEvent: {}
+[29.654083] (-) TimerEvent: {}
+[29.754525] (-) TimerEvent: {}
+[29.855091] (-) TimerEvent: {}
+[29.955575] (-) TimerEvent: {}
+[30.056164] (-) TimerEvent: {}
+[30.156640] (-) TimerEvent: {}
+[30.257234] (-) TimerEvent: {}
+[30.357696] (-) TimerEvent: {}
+[30.458149] (-) TimerEvent: {}
+[30.558648] (-) TimerEvent: {}
+[30.659172] (-) TimerEvent: {}
+[30.759705] (-) TimerEvent: {}
+[30.860155] (-) TimerEvent: {}
+[30.960711] (-) TimerEvent: {}
+[31.061220] (-) TimerEvent: {}
+[31.161785] (-) TimerEvent: {}
+[31.262254] (-) TimerEvent: {}
+[31.362759] (-) TimerEvent: {}
+[31.463300] (-) TimerEvent: {}
+[31.563767] (-) TimerEvent: {}
+[31.664261] (-) TimerEvent: {}
+[31.764788] (-) TimerEvent: {}
+[31.865267] (-) TimerEvent: {}
+[31.965762] (-) TimerEvent: {}
+[32.066230] (-) TimerEvent: {}
+[32.166767] (-) TimerEvent: {}
+[32.267230] (-) TimerEvent: {}
+[32.367719] (-) TimerEvent: {}
+[32.468155] (-) TimerEvent: {}
+[32.568640] (-) TimerEvent: {}
+[32.669103] (-) TimerEvent: {}
+[32.769568] (-) TimerEvent: {}
+[32.870019] (-) TimerEvent: {}
+[32.970516] (-) TimerEvent: {}
+[33.033499] (space_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable demo\x1b[0m\n'}
+[33.070791] (-) TimerEvent: {}
+[33.171272] (-) TimerEvent: {}
+[33.271888] (-) TimerEvent: {}
+[33.372499] (-) TimerEvent: {}
+[33.473375] (-) TimerEvent: {}
+[33.573952] (-) TimerEvent: {}
+[33.674591] (-) TimerEvent: {}
+[33.775058] (-) TimerEvent: {}
+[33.844387] (space_driver) StdoutLine: {'line': b'[100%] Built target demo\n'}
+[33.875247] (-) TimerEvent: {}
+[33.880158] (space_driver) CommandEnded: {'returncode': 0}
+[33.975554] (-) TimerEvent: {}
+[34.050828] (space_driver) JobProgress: {'identifier': 'space_driver', 'progress': 'install'}
+[34.051809] (space_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/landau/Documents/GitHub/space_robot/build/space_driver'], 'cwd': '/home/landau/Documents/GitHub/space_robot/build/space_driver', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'landau'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1616'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/landau'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/landau/Documents/GitHub/space_robot/build'), ('TERM_PROGRAM_VERSION', '1.89.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1519'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2209'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'landau'), ('JOURNAL_STREAM', '8:45232'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'landau'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/landau-Robotics:@/tmp/.ICE-unix/1662,unix/landau-Robotics:/tmp/.ICE-unix/1662'), ('INVOCATION_ID', '37d1ff0c35f24b3a9d3e695b1d07d8a5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-23256eee4b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '84'), ('AMENT_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_driver:/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/landau/Documents/GitHub/space_robot/build/space_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy')]), 'shell': False}
+[34.076869] (-) TimerEvent: {}
+[34.084020] (space_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[34.084897] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/main\n'}
+[34.086139] (space_driver) StdoutLine: {'line': b'-- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo\n'}
+[34.089584] (space_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo" to ""\n'}
+[34.090177] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/package_run_dependencies/space_driver\n'}
+[34.090578] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/parent_prefix_path/space_driver\n'}
+[34.091022] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.sh\n'}
+[34.091428] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.dsv\n'}
+[34.091823] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.sh\n'}
+[34.092157] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.dsv\n'}
+[34.092417] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.bash\n'}
+[34.092965] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.sh\n'}
+[34.093485] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.zsh\n'}
+[34.093964] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.dsv\n'}
+[34.094318] (space_driver) StdoutLine: {'line': b'-- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.dsv\n'}
+[34.094626] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/packages/space_driver\n'}
+[34.095091] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig.cmake\n'}
+[34.095423] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig-version.cmake\n'}
+[34.095753] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.xml\n'}
+[34.096127] (space_driver) StdoutLine: {'line': b'-- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/pkgconfig/gflags.pc\n'}
+[34.100447] (space_driver) CommandEnded: {'returncode': 0}
+[34.177129] (-) TimerEvent: {}
+[34.278201] (-) TimerEvent: {}
+[34.327755] (space_driver) JobEnded: {'identifier': 'space_driver', 'rc': 0}
+[34.330808] (-) EventReactorShutdown: {}

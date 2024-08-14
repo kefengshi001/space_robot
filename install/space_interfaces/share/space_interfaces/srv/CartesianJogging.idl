@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from space_interfaces/srv/CartesianJogging.srv
+// generated code does not contain a copyright notice
+
+
+module space_interfaces {
+  module srv {
+    struct CartesianJogging_Request {
+      @verbatim (language="comment", text=
+        " movement direction")
+      string axis;
+
+      @verbatim (language="comment", text=
+        "float velocity" "\n"
+        " run signal")
+      boolean run;
+
+      @verbatim (language="comment", text=
+        "velocity jonint or cartesian  joint--1  cartesian--0")
+      boolean signal;
+    };
+    struct CartesianJogging_Response {
+      @verbatim (language="comment", text=
+        " indicate successful run of triggered service")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        " informational, e.g. for error messages")
+      string message;
+    };
+  };
+};

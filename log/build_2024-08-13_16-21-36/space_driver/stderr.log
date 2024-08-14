@@ -1,0 +1,211 @@
+CMake Warning (dev) at /opt/grpc/lib/cmake/protobuf/protobuf-options.cmake:6 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'protobuf_MODULE_COMPATIBLE'.
+Call Stack (most recent call first):
+  /opt/grpc/lib/cmake/protobuf/protobuf-config.cmake:2 (include)
+  /opt/rocos/app/lib/cmake/rocos_app/common.cmake:101 (find_package)
+  /opt/rocos/app/lib/cmake/rocos_app/rocos_app-config.cmake:32 (include)
+  CMakeLists.txt:27 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In member function ‘[01m[Kbool gflags::{anonymous}::FlagValue::Validate(const char*, gflags::{anonymous}::ValidateFnProto) const[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:403:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, bool)[m[K’ [[01;35m[K-Wcast-function-type[m[K]
+  403 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(bool));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:406:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, gflags::int32)[m[K’ {aka ‘[01m[Kbool (*)(const char*, int)[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+  406 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(int32));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:409:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, gflags::uint32)[m[K’ {aka ‘[01m[Kbool (*)(const char*, unsigned int)[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+  409 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(uint32));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:412:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, gflags::int64)[m[K’ {aka ‘[01m[Kbool (*)(const char*, long int)[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+  412 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(int64));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:415:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, gflags::uint64)[m[K’ {aka ‘[01m[Kbool (*)(const char*, long unsigned int)[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+  415 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(uint64));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:418:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, double)[m[K’ [[01;35m[K-Wcast-function-type[m[K]
+  418 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(double));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:421:28:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} to ‘[01m[Kbool (*)(const char*, const string&)[m[K’ {aka ‘[01m[Kbool (*)(const char*, const std::__cxx11::basic_string<char>&)[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+  421 |           validate_fn_proto[01;35m[K)[m[K(flagname, VALUE_AS(string));
+      |                            [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const bool*, bool (*)(const char*, bool))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1895:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, bool)[m[K’ to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1895 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const int32*, bool (*)(const char*, gflags::int32))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1899:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, gflags::int32)[m[K’ {aka ‘[01m[Kbool (*)(const char*, int)[m[K’} to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1899 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const uint32*, bool (*)(const char*, gflags::uint32))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1903:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, gflags::uint32)[m[K’ {aka ‘[01m[Kbool (*)(const char*, unsigned int)[m[K’} to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1903 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const int64*, bool (*)(const char*, gflags::int64))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1907:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, gflags::int64)[m[K’ {aka ‘[01m[Kbool (*)(const char*, long int)[m[K’} to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1907 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const uint64*, bool (*)(const char*, gflags::uint64))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1911:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, gflags::uint64)[m[K’ {aka ‘[01m[Kbool (*)(const char*, long unsigned int)[m[K’} to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1911 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const double*, bool (*)(const char*, double))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1915:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, double)[m[K’ to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1915 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:[m[K In function ‘[01m[Kbool gflags::RegisterFlagValidator(const string*, bool (*)(const char*, const string&))[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags.cc:1919:78:[m[K [01;35m[Kwarning: [m[Kcast between incompatible function types from ‘[01m[Kbool (*)(const char*, const string&)[m[K’ {aka ‘[01m[Kbool (*)(const char*, const std::__cxx11::basic_string<char>&)[m[K’} to ‘[01m[Kgflags::{anonymous}::ValidateFnProto[m[K’ {aka ‘[01m[Kbool (*)()[m[K’} [[01;35m[K-Wcast-function-type[m[K]
+ 1919 |   return AddFlagValidator(flag, reinterpret_cast<ValidateFnProto>(validate_fn[01;35m[K)[m[K);
+      |                                                                              [01;35m[K^[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags_completions.cc:[m[K In function ‘[01m[Kvoid gflags::{anonymous}::CanonicalizeCursorWordAndSearchOptions(const string&, std::string*, gflags::{anonymous}::CompletionOptions*)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags_completions.cc:330:56:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K-Wimplicit-fallthrough=[m[K]
+  330 |     case 3: [01;35m[Koptions->flag_description_substring_search = true[m[K;
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags_completions.cc:331:5:[m[K [01;36m[Knote: [m[Khere
+  331 |     [01;36m[Kcase[m[K 2: options->flag_location_substring_search = true;
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags_completions.cc:331:53:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K-Wimplicit-fallthrough=[m[K]
+  331 |     case 2: [01;35m[Koptions->flag_location_substring_search = true[m[K;
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/src/gflags_completions.cc:332:5:[m[K [01;36m[Knote: [m[Khere
+  332 |     [01;36m[Kcase[m[K 1: options->flag_name_substring_search = true;
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:[m[K In function ‘[01m[Kbool AlwaysFail(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:141:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  141 | static bool AlwaysFail([01;35m[Kconst char* flag[m[K, bool value) { return value == false; }
+      |                        [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:[m[K In function ‘[01m[Kbool DeadlockIfCantLockInValidators(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:146:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  146 | static bool DeadlockIfCantLockInValidators([01;35m[Kconst char* flag[m[K, bool value) {
+      |                                            [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:[m[K In function ‘[01m[Kbool gflags::{anonymous}::ValidateTestFlagIs10(const char*, gflags::int32)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:1386:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflagname[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ 1386 | static bool ValidateTestFlagIs10([01;35m[Kconst char* flagname[m[K, int32 flagval) {
+      |                                  [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = bool; Actual = bool][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:279:37:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  273 | void AssertIsType([01;35m[KActual& x[m[K) {
+      |                   [01;35m[K~~~~~~~~^[m[K
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = int; Actual = int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:280:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long int; Actual = long int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:281:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = unsigned int; Actual = unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:282:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long unsigned int; Actual = long unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:283:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = double; Actual = double][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:284:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = std::__cxx11::basic_string<char>; Actual = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:285:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest_main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:[m[K In function ‘[01m[Kbool AlwaysFail(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:141:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  141 | static bool AlwaysFail([01;35m[Kconst char* flag[m[K, bool value) { return value == false; }
+      |                        [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:[m[K In function ‘[01m[Kbool DeadlockIfCantLockInValidators(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:146:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  146 | static bool DeadlockIfCantLockInValidators([01;35m[Kconst char* flag[m[K, bool value) {
+      |                                            [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:[m[K In function ‘[01m[Kbool gflags::{anonymous}::ValidateTestFlagIs10(const char*, gflags::int32)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:1386:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflagname[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ 1386 | static bool ValidateTestFlagIs10([01;35m[Kconst char* flagname[m[K, int32 flagval) {
+      |                                  [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = bool; Actual = bool][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:279:37:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  273 | void AssertIsType([01;35m[KActual& x[m[K) {
+      |                   [01;35m[K~~~~~~~~^[m[K
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = int; Actual = int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:280:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long int; Actual = long int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:281:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = unsigned int; Actual = unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:282:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long unsigned int; Actual = long unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:283:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = double; Actual = double][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:284:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = std::__cxx11::basic_string<char>; Actual = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:285:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/3rdparty/gflags/test/gflags_unittest.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:[m[K In function ‘[01m[Kbool AlwaysFail(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:141:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  141 | static bool AlwaysFail([01;35m[Kconst char* flag[m[K, bool value) { return value == false; }
+      |                        [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:[m[K In function ‘[01m[Kbool DeadlockIfCantLockInValidators(const char*, bool)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:146:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflag[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  146 | static bool DeadlockIfCantLockInValidators([01;35m[Kconst char* flag[m[K, bool value) {
+      |                                            [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:[m[K In function ‘[01m[Kbool gflags::{anonymous}::ValidateTestFlagIs10(const char*, gflags::int32)[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:1386:46:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kflagname[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ 1386 | static bool ValidateTestFlagIs10([01;35m[Kconst char* flagname[m[K, int32 flagval) {
+      |                                  [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = bool; Actual = bool][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:279:37:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  273 | void AssertIsType([01;35m[KActual& x[m[K) {
+      |                   [01;35m[K~~~~~~~~^[m[K
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = int; Actual = int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:280:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long int; Actual = long int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:281:39:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = unsigned int; Actual = unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:282:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = long unsigned int; Actual = long unsigned int][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:283:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = double; Actual = double][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:284:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc: In instantiation of ‘[01m[Kvoid gflags::{anonymous}::AssertIsType(Actual&) [with Expected = std::__cxx11::basic_string<char>; Actual = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:285:41:[m[K   required from here
+[01m[K/home/landau/Documents/GitHub/space_robot/build/space_driver/3rdparty/gflags/test/gflags_unittest-main.cc:273:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kx[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:[m[K In member function ‘[01m[Kvoid space_driver::robot_state_timer_callback()[m[K’:
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:152:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(0) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  152 |     robot_state_msg.jointposition = {[01;35m[Krobot_ptr->getJointPosition(0) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:152:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(0) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:153:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(1) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  153 |                                      [01;35m[Krobot_ptr->getJointPosition(1) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:153:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(1) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:154:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(2) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  154 |                                      [01;35m[Krobot_ptr->getJointPosition(2) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:154:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(2) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:155:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(3) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  155 |                                      [01;35m[Krobot_ptr->getJointPosition(3) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:155:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(3) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:156:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(4) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  156 |                                      [01;35m[Krobot_ptr->getJointPosition(4) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:156:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(4) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:157:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(5) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  157 |                                      [01;35m[Krobot_ptr->getJointPosition(5) * 180.0 / pi[m[K,
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:157:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(5) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:158:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(6) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+  158 |                                      [01;35m[Krobot_ptr->getJointPosition(6) * 180.0 / pi[m[K};
+      |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:158:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(6) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]

@@ -1,0 +1,98 @@
+[0.037s] Invoking command in '/home/landau/Documents/GitHub/space_robot/build/space_driver': AMENT_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/landau/Documents/GitHub/space_robot/build/space_driver -- -j8 -l8
+[0.176s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.257s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.817s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.935s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.947s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.413s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.576s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.581s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.018s] -- Using protobuf 3.18.1.0
+[2.065s] -- Using gRPC 1.43.0
+[2.092s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: date_time filesystem system chrono 
+[2.124s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: date_time filesystem system chrono thread 
+[2.231s] -- Found space_interfaces: 0.0.0 (/home/landau/Documents/GitHub/space_robot/install/space_interfaces/share/space_interfaces/cmake)
+[2.564s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.774s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.876s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.878s] -- Configured cppcheck include dirs: /home/landau/Documents/GitHub/space_robot/src/space_driver/include
+[2.878s] -- Configured cppcheck exclude dirs and/or files: 
+[2.976s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.976s] -- Configured cpplint exclude dirs and/or files: 
+[2.991s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.015s] -- Added test 'lint_cmake' to check CMake code style
+[3.028s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[3.124s] -- Added test 'uncrustify' to check C / C++ code style
+[3.125s] -- Configured uncrustify additional arguments: 
+[3.138s] -- Added test 'xmllint' to check XML markup files
+[3.155s] -- Configuring done
+[3.351s] -- Generating done
+[3.369s] -- Build files have been written to: /home/landau/Documents/GitHub/space_robot/build/space_driver
+[3.492s] [ 20%] Built target gflags_nothreads_static
+[3.573s] [35m[1mScanning dependencies of target demo[0m
+[3.585s] [ 30%] Built target gflags_unittest_main
+[3.590s] [ 40%] Built target gflags_unittest
+[3.593s] [ 50%] Built target gflags_strip_flags_test
+[3.593s] [ 60%] Built target gflags_unittest-main
+[3.612s] [35m[1mScanning dependencies of target main[0m
+[3.615s] [ 75%] Built target gflags_declare_test
+[3.755s] [ 80%] [32mBuilding CXX object CMakeFiles/demo.dir/src/demo.cpp.o[0m
+[3.956s] [ 85%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[3.967s] [ 90%] [32mBuilding CXX object CMakeFiles/main.dir/src/space_driver.cpp.o[0m
+[27.872s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:[m[K In member function ‘[01m[Kvoid space_driver::robot_state_timer_callback()[m[K’:
+[27.872s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:152:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(0) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.873s]   152 |     robot_state_msg.jointposition = {[01;35m[Krobot_ptr->getJointPosition(0) * 180.0 / pi[m[K,
+[27.873s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.873s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:152:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(0) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.874s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:153:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(1) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.874s]   153 |                                      [01;35m[Krobot_ptr->getJointPosition(1) * 180.0 / pi[m[K,
+[27.874s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.875s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:153:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(1) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.875s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:154:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(2) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.875s]   154 |                                      [01;35m[Krobot_ptr->getJointPosition(2) * 180.0 / pi[m[K,
+[27.876s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.876s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:154:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(2) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.876s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:155:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(3) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.877s]   155 |                                      [01;35m[Krobot_ptr->getJointPosition(3) * 180.0 / pi[m[K,
+[27.877s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.877s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:155:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(3) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.878s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:156:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(4) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.878s]   156 |                                      [01;35m[Krobot_ptr->getJointPosition(4) * 180.0 / pi[m[K,
+[27.878s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.879s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:156:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(4) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.879s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:157:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(5) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.880s]   157 |                                      [01;35m[Krobot_ptr->getJointPosition(5) * 180.0 / pi[m[K,
+[27.880s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.880s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:157:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(5) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.880s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:158:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(6) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[27.881s]   158 |                                      [01;35m[Krobot_ptr->getJointPosition(6) * 180.0 / pi[m[K};
+[27.881s]       |                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[27.881s] [01m[K/home/landau/Documents/GitHub/space_robot/src/space_driver/src/space_driver.cpp:158:77:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((((space_driver*)this)->space_driver::robot_ptr->rocos::Robot::getJointPosition(6) * 1.8e+2) / ((space_driver*)this)->space_driver::pi)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[42.614s] [ 95%] [32m[1mLinking CXX executable demo[0m
+[43.792s] [ 95%] Built target demo
+[64.257s] [100%] [32m[1mLinking CXX executable main[0m
+[66.223s] [100%] Built target main
+[66.266s] Invoked command in '/home/landau/Documents/GitHub/space_robot/build/space_driver' returned '0': AMENT_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/landau/Documents/GitHub/space_robot/build/space_driver -- -j8 -l8
+[66.423s] Invoking command in '/home/landau/Documents/GitHub/space_robot/build/space_driver': AMENT_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/landau/Documents/GitHub/space_robot/build/space_driver
+[66.446s] -- Install configuration: ""
+[66.448s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/main
+[66.466s] -- Set runtime path of "/home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/main" to ""
+[66.467s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo
+[66.472s] -- Set runtime path of "/home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo" to ""
+[66.472s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/package_run_dependencies/space_driver
+[66.473s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/parent_prefix_path/space_driver
+[66.473s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.sh
+[66.474s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.dsv
+[66.474s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.sh
+[66.475s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.dsv
+[66.476s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.bash
+[66.476s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.sh
+[66.477s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.zsh
+[66.477s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.dsv
+[66.478s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.dsv
+[66.480s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/packages/space_driver
+[66.480s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig.cmake
+[66.480s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig-version.cmake
+[66.481s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.xml
+[66.481s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/pkgconfig/gflags.pc
+[66.492s] Invoked command in '/home/landau/Documents/GitHub/space_robot/build/space_driver' returned '0': AMENT_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/opt/ros/foxy LD_LIBRARY_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/landau/Documents/GitHub/space_robot/build/space_driver

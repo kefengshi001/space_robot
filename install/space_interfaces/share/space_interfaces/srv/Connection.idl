@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from space_interfaces/srv/Connection.srv
+// generated code does not contain a copyright notice
+
+
+module space_interfaces {
+  module srv {
+    struct Connection_Request {
+      boolean connect;
+    };
+    struct Connection_Response {
+      @verbatim (language="comment", text=
+        "判断所有service节点返回success为ture之后此节点返回success为true")
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,2 @@
+
+bool success  #判断所有service节点返回success为ture之后此节点返回success为true

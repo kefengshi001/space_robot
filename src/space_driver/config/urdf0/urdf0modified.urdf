@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf0">
+  <link
+    name="base_link">
+    <!-- <inertial>
+      <origin
+        xyz="8.72986299132619E-06 0.000110535562543035 0.0443842390944278"
+        rpy="0 0 0" />
+      <mass
+        value="5.02870680905452" />
+      <inertia
+        ixx="0.0167806415192983"
+        ixy="2.58690759696259E-06"
+        ixz="-9.70880165009334E-07"
+        iyy="0.0168131920532754"
+        iyz="-1.22930663997648E-05"
+        izz="0.0284237575746704" />
+    </inertial> -->
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-2.04097438563936E-05 0.011301551101616 0.0655223391033291"
+        rpy="0 0 0" />
+      <mass
+        value="55.7444455513422" />
+      <inertia
+        ixx="0.727810823126991"
+        ixy="-6.08303990712885E-06"
+        ixz="-2.12903061832592E-07"
+        iyy="0.927554282928872"
+        iyz="0.0220552256243774"
+        izz="1.04521065780087" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.3645"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="0" type="driver">
+            <limit lower="-0.0001" upper="0.0001"  vel="3.0" acc="10.0" jerk="150.0" effort="30.0"/>
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0"
+                       user_unit_name="rad"/>
+             <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>        
+        </hardware>
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="1.2631017255465E-05 -0.00998695022675111 0.099695434986445"
+        rpy="0 0 0" />
+      <mass
+        value="63.0188095750657" />
+      <inertia
+        ixx="0.765163850790187"
+        ixy="4.97111083556097E-06"
+        ixz="5.24185415367775E-06"
+        iyy="0.964838451945914"
+        iyz="-0.0220552256243779"
+        izz="1.11446804310499" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 0.6115 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="1" type="driver">
+            <limit lower="-2.22" upper="2.22" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="7.95950088592247E-05 -0.00352653187066096 -2.49589544552404"
+        rpy="0 0 0" />
+      <mass
+        value="212.870919787655" />
+      <inertia
+        ixx="27.5783375000673"
+        ixy="0.00110729799537331"
+        ixz="0.000240364566676525"
+        iyy="28.0743279332976"
+        iyz="9.78461217462477E-05"
+        izz="2.97692676274956" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="0 -5.0815 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 -1" />
+    <hardware id="2" type="driver">
+            <limit lower="-0.0001" upper="0.0001" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="2.22 1.76550604566529E-13 -0.521128276464802"
+        rpy="0 0 0" />
+      <mass
+        value="226.927653025662" />
+      <inertia
+        ixx="2.91047984976881"
+        ixy="-9.94222168871076E-06"
+        ixz="3.14603126799796E-15"
+        iyy="27.6919474025717"
+        iyz="1.15288419593986E-14"
+        izz="28.3905557872013" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="3" type="driver">
+            <limit lower="-2.23" upper="2.23" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="-1.26310178133507E-05 0.0996954349864509 -0.00998695022675433"
+        rpy="0 0 0" />
+      <mass
+        value="63.0188095750638" />
+      <inertia
+        ixx="0.765163850790159"
+        ixy="-5.24185412364793E-06"
+        ixz="-4.97111085848088E-06"
+        iyy="1.11446804310497"
+        iyz="-0.0220552256243783"
+        izz="0.964838451945891" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="continuous">
+    <origin
+      xyz="4.44 0 0.035"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="4" type="driver">
+            <limit lower="-2.71" upper="2.71" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="2.04097449541529E-05 -0.0655223391029839 -0.0113015511016092"
+        rpy="0 0 0" />
+      <mass
+        value="55.7444455513433" />
+      <inertia
+        ixx="0.727810823126995"
+        ixy="-2.12903042217403E-07"
+        ixz="-6.08303989137093E-06"
+        iyy="1.04521065780089"
+        iyz="0.0220552256243767"
+        izz="0.927554282928868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="continuous">
+    <origin
+      xyz="0 0.6115 0"
+      rpy="-1.5708 1.5708 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="5" type="driver">
+            <limit lower="-0.0001" upper="0.0001" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="-6.2551368357866E-05 9.15513375767674E-05 -0.0443842390944282"
+        rpy="0 0 0" />
+      <mass
+        value="5.02870680905465" />
+      <inertia
+        ixx="0.0167909264766882"
+        ixy="-1.5352283132167E-05"
+        ixz="-6.95656770372791E-06"
+        iyy="0.0168029070958863"
+        iyz="1.01817609272676E-05"
+        izz="0.028423757574671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf0/meshes/Link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="continuous">
+    <origin
+      xyz="0 -0.3645 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 0 1" />
+    <hardware id="6" type="driver">
+            <limit lower="-2.84" upper="2.84" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <inputs name="Inputs">
+                <status_word>Statusword</status_word>
+                <position_actual_value>Position actual value</position_actual_value>
+                <velocity_actual_value>Velocity actual value</velocity_actual_value>
+                <torque_actual_value>Torque actual value</torque_actual_value>
+                <load_torque_value>Analog Input 1</load_torque_value>
+                <secondary_position_value>Auxiliary position actual value</secondary_position_value>
+                <secondary_velocity_value>Secondary velocity value</secondary_velocity_value>
+            </inputs>
+            <outputs name="Outputs">
+                <control_word>Controlword</control_word>
+                <mode_of_operation>Modes of operation</mode_of_operation>
+                <target_position>Target position</target_position>
+                <target_velocity>Target velocity</target_velocity>
+                <target_torque>Target torque</target_torque>
+            </outputs>  
+        </hardware>
+  </joint>
+</robot>

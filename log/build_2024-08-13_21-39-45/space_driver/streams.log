@@ -1,0 +1,35 @@
+[0.041s] Invoking command in '/home/landau/Documents/GitHub/space_robot/build/space_driver': CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy /usr/bin/cmake --build /home/landau/Documents/GitHub/space_robot/build/space_driver -- -j8 -l8
+[0.221s] [ 20%] Built target gflags_nothreads_static
+[0.285s] [35m[1mScanning dependencies of target demo[0m
+[0.320s] [ 30%] Built target gflags_unittest-main
+[0.339s] [ 45%] Built target gflags_declare_test
+[0.340s] [ 55%] Built target gflags_unittest_main
+[0.353s] [ 65%] Built target gflags_strip_flags_test
+[0.370s] [ 75%] Built target gflags_unittest
+[0.417s] [ 90%] Built target main
+[0.447s] [ 95%] [32mBuilding CXX object CMakeFiles/demo.dir/src/demo.cpp.o[0m
+[30.473s] [100%] [32m[1mLinking CXX executable demo[0m
+[31.284s] [100%] Built target demo
+[31.321s] Invoked command in '/home/landau/Documents/GitHub/space_robot/build/space_driver' returned '0': CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy /usr/bin/cmake --build /home/landau/Documents/GitHub/space_robot/build/space_driver -- -j8 -l8
+[31.496s] Invoking command in '/home/landau/Documents/GitHub/space_robot/build/space_driver': CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy /usr/bin/cmake --install /home/landau/Documents/GitHub/space_robot/build/space_driver
+[31.524s] -- Install configuration: ""
+[31.524s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/main
+[31.525s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo
+[31.529s] -- Set runtime path of "/home/landau/Documents/GitHub/space_robot/install/space_driver/lib/space_driver/demo" to ""
+[31.530s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/package_run_dependencies/space_driver
+[31.530s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/parent_prefix_path/space_driver
+[31.530s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.sh
+[31.531s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/ament_prefix_path.dsv
+[31.531s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.sh
+[31.531s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/environment/path.dsv
+[31.532s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.bash
+[31.532s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.sh
+[31.533s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.zsh
+[31.533s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/local_setup.dsv
+[31.534s] -- Installing: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.dsv
+[31.534s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/ament_index/resource_index/packages/space_driver
+[31.534s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig.cmake
+[31.535s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/cmake/space_driverConfig-version.cmake
+[31.535s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/share/space_driver/package.xml
+[31.535s] -- Up-to-date: /home/landau/Documents/GitHub/space_robot/install/space_driver/lib/pkgconfig/gflags.pc
+[31.543s] Invoked command in '/home/landau/Documents/GitHub/space_robot/build/space_driver' returned '0': CMAKE_PREFIX_PATH=/home/landau/Documents/GitHub/space_robot/install/space_interfaces:/home/landau/Documents/GitHub/space_robot/install/space_driver:/opt/ros/foxy /usr/bin/cmake --install /home/landau/Documents/GitHub/space_robot/build/space_driver

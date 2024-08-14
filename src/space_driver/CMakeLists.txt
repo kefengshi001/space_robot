@@ -34,14 +34,18 @@ find_package(space_interfaces REQUIRED)
 
 add_executable(main src/main.cpp src/space_driver.cpp)
 target_link_libraries(main  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
-
 ament_target_dependencies(main rclcpp std_msgs space_interfaces)
+
+
+add_executable(demo src/demo.cpp)
+target_link_libraries(demo  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
+ament_target_dependencies(demo rclcpp std_msgs)
 # target_include_directories(main PUBLIC
 #   ${catkin_LIBRARIES}  rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags
 #   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 #   $<INSTALL_INTERFACE:include>)
 
-install(TARGETS main
+install(TARGETS main demo
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

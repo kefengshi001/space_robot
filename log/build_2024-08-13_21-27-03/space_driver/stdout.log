@@ -1,0 +1,9 @@
+[ 20%] Built target gflags_nothreads_static
+[35m[1mScanning dependencies of target demo[0m
+[ 35%] Built target gflags_declare_test
+[ 45%] Built target gflags_unittest-main
+[ 55%] Built target gflags_unittest_main
+[ 65%] Built target gflags_strip_flags_test
+[ 75%] Built target gflags_unittest
+[ 90%] Built target main
+[ 95%] [32mBuilding CXX object CMakeFiles/demo.dir/src/demo.cpp.o[0m

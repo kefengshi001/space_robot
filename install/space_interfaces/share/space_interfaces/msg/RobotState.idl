@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from space_interfaces/msg/RobotState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Quaternion.idl"
+
+module space_interfaces {
+  module msg {
+    struct RobotState {
+      sequence<float> jointposition;
+
+      @verbatim (language="comment", text=
+        "float32[] jointvelocity")
+      geometry_msgs::msg::Point position;
+
+      geometry_msgs::msg::Quaternion orientation;
+    };
+  };
+};

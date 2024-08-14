@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from space_interfaces/msg/JointJoggingMsg.msg
+// generated code does not contain a copyright notice
+
+
+module space_interfaces {
+  module msg {
+    struct JointJoggingMsg {
+      @verbatim (language="comment", text=
+        " joint id")
+      string joint;
+
+      @verbatim (language="comment", text=
+        "float velocity" "\n"
+        " run signal")
+      boolean run;
+
+      @verbatim (language="comment", text=
+        " 运动的正反方向，true:+， false:-")
+      boolean signal;
+    };
+  };
+};

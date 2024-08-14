@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from space_interfaces/srv/JointJogging.srv
+// generated code does not contain a copyright notice
+
+
+module space_interfaces {
+  module srv {
+    struct JointJogging_Request {
+      @verbatim (language="comment", text=
+        " joint id")
+      string joint;
+
+      @verbatim (language="comment", text=
+        "float velocity" "\n"
+        " run signal")
+      boolean run;
+
+      @verbatim (language="comment", text=
+        " 运动的正反方向，true:+， false:-")
+      boolean signal;
+    };
+    struct JointJogging_Response {
+      @verbatim (language="comment", text=
+        " indicate successful run of triggered service")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        " informational, e.g. for error messages")
+      string message;
+    };
+  };
+};
