@@ -24,6 +24,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(rocos_app REQUIRED)
 find_package(Eigen3 REQUIRED)
 add_subdirectory(3rdparty/gflags)
@@ -32,20 +33,41 @@ find_package(space_interfaces REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# 添加 launch 文件路径
+install(
+  DIRECTORY 
+  launch
+  config
+  DESTINATION share/${PROJECT_NAME}
+)
+
 add_executable(main src/main.cpp src/space_driver.cpp)
 target_link_libraries(main  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
-ament_target_dependencies(main rclcpp std_msgs space_interfaces)
+ament_target_dependencies(main rclcpp std_msgs space_interfaces sensor_msgs)
 
 
 add_executable(demo src/demo.cpp)
 target_link_libraries(demo  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
 ament_target_dependencies(demo rclcpp std_msgs)
+
+add_executable(demo_moveJ src/demo_moveJ.cpp)
+target_link_libraries(demo_moveJ  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
+ament_target_dependencies(demo_moveJ rclcpp std_msgs)
+
+
+add_executable(demo_cal src/demo_cal.cpp)
+target_link_libraries(demo_cal  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
+ament_target_dependencies(demo_cal rclcpp std_msgs)
+
+add_executable(test_function src/test.cpp)
+target_link_libraries(test_function  ${catkin_LIBRARIES} rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags)
+ament_target_dependencies(test_function rclcpp std_msgs)
 # target_include_directories(main PUBLIC
 #   ${catkin_LIBRARIES}  rocos::hardware rocos::kinematics rocos::drive rocos::protocol rocos::robot  Eigen3::Eigen gflags::gflags
 #   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 #   $<INSTALL_INTERFACE:include>)
 
-install(TARGETS main demo
+install(TARGETS main demo demo_moveJ demo_cal test_function
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

@@ -1,0 +1,4 @@
+int32  urdf_id          #0:为urdf0, 1:为urdf1；
+bool  adapter_status    #机械臂末端适配器状态
+---
+bool success 

@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter 111-->
 <robot
-  name="urdf0">
+  name="urdf0initialized">
   <link
     name="base_link">
     <!-- <inertial>
@@ -97,7 +97,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="0" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-3.1415926" upper="3.1415926" vel="1" acc="1.0" jerk="1.0" effort="30.0"/>
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
              <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -170,7 +170,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="1" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-3.1415926" upper="3.1415926" vel="1" acc="1.0" jerk="1.0" effort="30.0"/>
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -244,7 +244,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="2" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0" />
+            <limit lower="-0.0001" upper="0.0001" vel="1" acc="1.0" jerk="1.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -318,7 +318,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="3" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-3.1415926" upper="3.1415926" vel="1" acc="1.0" jerk="1.0" effort="30.0"/>
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -392,7 +392,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="4" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-3.1415926" upper="3.1415926" vel="1" acc="1.0" jerk="1.0" effort="30.0"/>
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -466,7 +466,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="5" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0" />
+            <limit lower="-0.0001" upper="0.0001" vel="1" acc="1.0" jerk="1.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -540,7 +540,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="6" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-3.1415926" upper="3.1415926" vel="1" acc="1.0" jerk="1.0" effort="30.0"/>
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>

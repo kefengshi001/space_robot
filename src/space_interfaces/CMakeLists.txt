@@ -27,7 +27,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/JointJoggingMsg.msg"
+  "msg/Jogging.msg"
   "msg/RobotState.msg"
   "srv/CartesianJogging.srv"
   "srv/CartesianMovement.srv"
@@ -39,6 +39,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/Switch.srv"
   "srv/MultiAxisOffset.srv"
   "srv/MoveJIK.srv"
+  "srv/SetChain.srv"
   # "srv/AddThreeInts.srv"
 
   DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg

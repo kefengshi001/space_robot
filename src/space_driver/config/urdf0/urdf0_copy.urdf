@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/base_link.STL" />
+          filename="package://urdf0/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/base_link.STL" />
+          filename="package://urdf0/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link1.STL" />
+          filename="package://urdf0/meshes/Link1.STL" />
       </geometry>
       <material
         name="">
@@ -80,13 +80,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link1.STL" />
+          filename="package://urdf0/meshes/Link1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
     name="joint1"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 0 0.38932"
       rpy="3.1416 0 0" />
@@ -97,8 +97,9 @@
     <axis
       xyz="0 0 1" />
     <hardware id="0" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
-            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
+            <limit lower="-0.0001" upper="0.0001"  vel="3.0" acc="10.0" jerk="150.0" effort="30.0"/>
+            <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0"
+                       user_unit_name="rad"/>
              <inputs name="Inputs">
                 <status_word>Statusword</status_word>
                 <position_actual_value>Position actual value</position_actual_value>
@@ -139,7 +140,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link2.STL" />
+          filename="package://urdf0/meshes/Link2.STL" />
       </geometry>
       <material
         name="">
@@ -153,7 +154,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link2.STL" />
+          filename="package://urdf0/meshes/Link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -170,7 +171,9 @@
     <axis
       xyz="0 0 1" />
     <hardware id="1" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <!-- <limit lower="-2.22" upper="2.22" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" /> -->
+            <!-- <transform ratio="1.0" offset_pos_cnt="6179790" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/> -->
+            <limit lower="-0.001" upper="0.001" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -189,7 +192,6 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-   
   </joint>
   <link
     name="Link3">
@@ -213,7 +215,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link3.STL" />
+          filename="package://urdf0/meshes/Link3.STL" />
       </geometry>
       <material
         name="">
@@ -227,13 +229,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link3.STL" />
+          filename="package://urdf0/meshes/Link3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
     name="joint3"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 -5.0815 0"
       rpy="-1.5708 0 0" />
@@ -244,7 +246,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="2" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0" />
+            <limit lower="-0.0001" upper="0.0001" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -263,7 +265,6 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-    
   </joint>
   <link
     name="Link4">
@@ -287,7 +288,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link4.STL" />
+          filename="package://urdf0/meshes/Link4.STL" />
       </geometry>
       <material
         name="">
@@ -301,7 +302,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link4.STL" />
+          filename="package://urdf0/meshes/Link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -318,7 +319,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="3" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-2.23" upper="2.23" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -337,7 +338,6 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-    
   </joint>
   <link
     name="Link5">
@@ -361,7 +361,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link5.STL" />
+          filename="package://urdf0/meshes/Link5.STL" />
       </geometry>
       <material
         name="">
@@ -375,7 +375,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link5.STL" />
+          filename="package://urdf0/meshes/Link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -392,7 +392,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="4" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-2.71" upper="2.71" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -411,7 +411,6 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-    
   </joint>
   <link
     name="Link6">
@@ -435,7 +434,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link6.STL" />
+          filename="package://urdf0/meshes/Link6.STL" />
       </geometry>
       <material
         name="">
@@ -449,13 +448,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link6.STL" />
+          filename="package://urdf0/meshes/Link6.STL" />
       </geometry>
     </collision>
   </link>
   <joint
     name="joint6"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 -0.6115 0"
       rpy="1.5708 1.5708 0" />
@@ -466,7 +465,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="5" type="driver">
-            <limit lower="-0.0001" upper="0.0001" vel="0.1" acc="1.0" jerk="1.0" effort="30.0" />
+            <limit lower="-0.0001" upper="0.0001" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -485,7 +484,6 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-   
   </joint>
   <link
     name="Link7">
@@ -509,7 +507,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link7.STL" />
+          filename="package://urdf0/meshes/Link7.STL" />
       </geometry>
       <material
         name="">
@@ -523,7 +521,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://space_driver/config/urdf0/meshes/Link7.STL" />
+          filename="package://urdf0/meshes/Link7.STL" />
       </geometry>
     </collision>
   </link>
@@ -540,7 +538,7 @@
     <axis
       xyz="0 0 1" />
     <hardware id="6" type="driver">
-            <limit lower="-3.1415926" upper="3.1415926" vel="0.1" acc="1.0" jerk="1.0" effort="30.0"/>
+            <limit lower="-2.84" upper="2.84" vel="3.0" acc="10.0" jerk="150.0" effort="30.0" />
             <transform ratio="1.0" offset_pos_cnt="0" cnt_per_unit="140184287.42160" torque_per_unit="1.0" user_unit_name="rad"/>
             <inputs name="Inputs">
                 <status_word>Statusword</status_word>
@@ -559,6 +557,5 @@
                 <target_torque>Target torque</target_torque>
             </outputs>  
         </hardware>
-      
   </joint>
 </robot>

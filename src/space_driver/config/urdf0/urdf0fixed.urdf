@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter 111-->
 <robot
-  name="urdf0">
+  name="urdf0fixed">
   <link
     name="base_link">
     <!-- <inertial>
@@ -86,7 +86,7 @@
   </link>
   <joint
     name="joint1"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 0 0.38932"
       rpy="3.1416 0 0" />
@@ -233,7 +233,7 @@
   </link>
   <joint
     name="joint3"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 -5.0815 0"
       rpy="-1.5708 0 0" />
@@ -455,7 +455,7 @@
   </link>
   <joint
     name="joint6"
-    type="continuous">
+    type="fixed">
     <origin
       xyz="0 -0.6115 0"
       rpy="1.5708 1.5708 0" />
