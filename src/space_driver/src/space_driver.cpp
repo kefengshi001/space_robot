@@ -277,7 +277,24 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     KDL::JntArray q(7);
     // 当前机械臂的3和6关节没法运动
     // q(0) = request->goalangle[0] * pi / 180.0;
-    q(0) = robot_ptr->getJointPosition(0);
+    if (robot_ptr->getUrdfState() == 0)
+    {
+        q(0) = robot_ptr->getJointPosition(0);
+        q(6) = request->goalangle[6] * pi / 180.0;
+    }
+    else if (robot_ptr->getUrdfState() == 1)
+    {
+       q(0) =request->goalangle[0] * pi / 180.0;
+       q(6) = robot_ptr->getJointPosition(6);
+    }
+    else
+    {
+        throw std::runtime_error("urdf_state error");
+    }
+    
+    
+    
+    
     q(1) = request->goalangle[1] * pi / 180.0;
     // q(1) = robot_ptr->getJointPosition(1);
     // q(2) = request->goalangle[2] * pi / 180.0;
@@ -286,7 +303,7 @@ void space_driver::rocos_movej_callback(const std::shared_ptr<space_interfaces::
     q(4) = request->goalangle[4] * pi / 180.0;
     // q(5) = request->goalangle[5] * pi / 180.0;
     q(5) = robot_ptr->getJointPosition(5);
-    q(6) = request->goalangle[6] * pi / 180.0;
+    
     RCLCPP_INFO(this->get_logger(), "MoveJ执行开始");
     robot_ptr->MoveJ(q, this->_speed, this->_accel);
     // usleep(10000000);
@@ -325,14 +342,30 @@ void space_driver::rocos_movej_offset_callback(const std::shared_ptr<space_inter
     }
 
     KDL::JntArray q(7);
-    q(0) = robot_ptr->getJointPosition(0);
+
+    if (robot_ptr->getUrdfState() == 0)
+    {
+        q(0) = robot_ptr->getJointPosition(0);
+        q(6) = request->offsetangle[6] * pi / 180.0 + robot_ptr->getJointPosition(6);
+    }
+    else if (robot_ptr->getUrdfState() == 1)
+    {
+        q(0) = request->offsetangle[0] * pi / 180.0 + robot_ptr->getJointPosition(0);
+        q(6) = robot_ptr->getJointPosition(6);
+    }
+    else
+    {
+        throw std::runtime_error("urdf_state error");
+    }
+
+    // q(0) = robot_ptr->getJointPosition(0);
     q(2) = robot_ptr->getJointPosition(2);
     q(5) = robot_ptr->getJointPosition(5);
 
     q(1) = robot_ptr->getJointPosition(1) + request->offsetangle[1] * pi / 180.0;
     q(3) = robot_ptr->getJointPosition(3) + request->offsetangle[3] * pi / 180.0;
     q(4) = robot_ptr->getJointPosition(4) + request->offsetangle[4] * pi / 180.0;
-    q(6) = robot_ptr->getJointPosition(6) + request->offsetangle[6] * pi / 180.0;
+    // q(6) = robot_ptr->getJointPosition(6) + request->offsetangle[6] * pi / 180.0;
 
     RCLCPP_INFO(this->get_logger(), "MoveJOffset执行开始");
     robot_ptr->MoveJ(q, this->_speed, this->_accel);
@@ -644,7 +677,7 @@ void space_driver::Set_chain_callback(const std::shared_ptr<space_interfaces::sr
 {
     RCLCPP_INFO(this->get_logger(), "Received request with urdf_id=%d, adapter_status=%s", request->urdf_id, request->adapter_status ? "true" : "false");
     
-    if (robot_ptr->getUrdfState() == 0 || request->adapter_status == true) //第一次设置运动链或adapter_status为true
+    if (robot_ptr->getUrdfState() == -1 || request->adapter_status == true) //第一次设置运动链或adapter_status为true
     {
         //初始设置运动链
         if (request->urdf_id == 0)
